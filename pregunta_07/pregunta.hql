@@ -54,7 +54,7 @@ SELECT
     concat_ws(':',collect_list(cast(c1 as string))) AS elementos
 FROM
     tbl0
-GROUP BY c2;
+ORDER BY c2;
 
 INSERT OVERWRITE LOCAL DIRECTORY './output'
 ROW FORMAT DELIMITED FIELDS TERMINATED BY ','
